@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard Multi-Activités - Impact Associatif</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#007bff">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- SPLASH SCREEN -->
+  <div id="splash-screen">
+    <div class="splash-inner">
+      <h2>📊 Dashboard Impact Multi-Activités</h2>
+      <div class="loader"></div>
+      <p id="splash-message">Chargement des données...</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div>
+      <h1>📊 Dashboard Impact Multi-Activités</h1>
+      <p id="page-subtitle">Mesure d'impact associatif - 4 activités</p>
+    </div>
+
+    <div class="top-actions">
+      <div id="folder-status" class="status-box">
+        <span class="status-indicator inactive"></span>
+        <span class="status-text">Aucun dossier</span>
+      </div>
+      <button id="choose-folder" class="btn secondary">📁 Choisir dossier projet</button>
+      <button id="process-data" class="btn success" disabled>⚙️ Traiter les CSV</button>
+      <button id="open-questionnaire" class="btn primary" disabled>📝 Nouveau questionnaire</button>
+      <button id="export-report" class="btn secondary" disabled>💾 Exporter PDF</button>
+      <button id="open-display-options" class="btn secondary">⚙️ Préférences</button>
+    </div>
+  </header>
+
+  <!-- CONTRÔLES -->
+  <div class="controls">
+    <div class="controls-row">
+      <label for="activity-selector">🌍 Activité :</label>
+      <select id="activity-selector" disabled>
+          <option value="all">Chargement...</option>
+      </select>
+      
+      <label for="search-remarks">🔍 Remarques :</label>
+      <input type="text" id="search-remarks" placeholder="Rechercher un mot clé..." />
+
+      <label>
+        <input type="checkbox" id="filter-hidden-remarks" /> Masquer remarques cachées
+      </label>
+    </div>
+  </div>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="dashboard-grid">
+    
+    <!-- SECTION KPI UNIVERSELS -->
+    <section class="card kpi-card full-width" id="section-kpis-universal">
+      <h3>⭐ Indicateurs Clés de Performance (Transversaux)</h3>
+      <div id="universal-kpis-container" class="kpi-grid">—</div>
+    </section>
+
+    <!-- SECTION COMPARAISON -->
+    <section class="card chart-card full-width" id="section-comparison">
+      <h3>📊 Comparaison des activités</h3>
+      <div id="comparison-charts-container">
+        <p class="text-center mt-10">Sélectionnez "Vue Globale" pour la comparaison.</p>
+      </div>
+    </section>
+    
+    <!-- SECTION ÉVOLUTION DES COMPÉTENCES -->
+    <section class="card full-width" id="specific-charts-container">
+      <h3>📈 Évolution des Compétences (Avant/Après)</h3>
+      <div id="evolution-charts-container" class="chart-grid">
+        <p class="text-center mt-10">Chargement des graphiques...</p>
+      </div>
+    </section>
+    
+    <!-- SECTION DÉMOGRAPHIE -->
+    <section class="card chart-card full-width" id="section-demographics">
+      <h3>👥 Démographie & Profils</h3>
+      <div id="demographics-container" class="chart-grid">
+        <p class="text-center mt-10">Chargement des données...</p>
+      </div>
+    </section>
+    
+    <!-- SECTION REMARQUES -->
+    <section class="card full-width" id="section-remarques">
+      <h3>💬 Remarques & Commentaires (<span id="remarques-count">0</span>)</h3>
+      <ul id="remarques-list" class="remarks-list">
+        <li>Pas de remarques à afficher.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <button type="button" class="btn secondary" id="reload-data" disabled>🔄 Recharger les Données</button>
+    <div>Dernière mise à jour: <span id="last-update">—</span></div>
+  </footer>
+
+  <!-- MODAL QUESTIONNAIRE -->
+  <div id="questionnaire-modal" class="modal">
+    <div class="modal-content">
+      <h2>📝 Nouveau Questionnaire</h2>
+      <p class="muted">Redirigez vers <a href="questionnaire.html" target="_blank">questionnaire.html</a> pour la saisie multi-activités.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn secondary" id="close-modal">Fermer</button>
+        <a href="questionnaire.html" target="_blank" class="btn success">Ouvrir le Questionnaire</a>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- MODAL OPTIONS D'AFFICHAGE - VERSION CORRIGÉE -->
+<div id="display-options-modal" class="modal">
+  <div class="modal-content modal-large">
+    <h2>⚙️ Préférences d'Affichage</h2>
+    <p class="muted">Personnalisez les éléments visibles dans votre dashboard. Toutes les préférences sont sauvegardées automatiquement.</p>
+    
+    <div id="display-options-form">
+      
+      <!-- === SECTION KPI (LISTE PLATE) === -->
+      <div class="preference-section">
+        <h3>📊 Indicateurs Clés (KPI)</h3>
+        <div class="display-option-group">
+          
+          <!-- KPIs PRINCIPAUX -->
+          <label>
+            <input type="checkbox" id="opt-satisfaction-moy" name="satisfaction-moy" checked>
+            <span class="label-text">
+              <strong>Satisfaction Moyenne</strong>
+              <small>Score moyen de satisfaction globale sur 5</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-nps" name="nps" checked>
+            <span class="label-text">
+              <strong>Net Promoter Score (NPS)</strong>
+              <small>Indicateur de recommandation (% promoteurs - détracteurs)</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-autonomie" name="autonomie" checked>
+            <span class="label-text">
+              <strong>Progression Autonomie</strong>
+              <small>Évolution de l'autonomie perçue entre avant et après</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-confiance" name="confiance" checked>
+            <span class="label-text">
+              <strong>Progression Confiance en Soi</strong>
+              <small>Évolution de la confiance en soi entre avant et après</small>
+            </span>
+          </label>
+          
+          <!-- KPIs DÉTAILLÉS -->
+          <label>
+            <input type="checkbox" id="opt-satisfaction-rate" name="satisfaction-rate" checked>
+            <span class="label-text">
+              <strong>Taux de Satisfaction (≥4/5)</strong>
+              <small>Pourcentage de participants satisfaits ou très satisfaits</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-non-response-rate" name="non-response-rate" checked>
+            <span class="label-text">
+              <strong>Taux de Données Manquantes</strong>
+              <small>Pourcentage de réponses incomplètes ou invalides</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-data-age" name="data-age" checked>
+            <span class="label-text">
+              <strong>Ancienneté Moyenne des Données</strong>
+              <small>Âge moyen des réponses en jours</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-quality-engagement" name="quality-engagement" checked>
+            <span class="label-text">
+              <strong>Taux d'Engagement Qualitatif</strong>
+              <small>Pourcentage de participants ayant laissé des remarques</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-comment-depth" name="comment-depth" checked>
+            <span class="label-text">
+              <strong>Profondeur Moyenne des Remarques</strong>
+              <small>Nombre moyen de caractères par remarque</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- === SECTION DÉMOGRAPHIE === -->
+      <div class="preference-section">
+        <h3>👥 Démographie & Profils</h3>
+        <div class="display-option-group">
+          <label>
+            <input type="checkbox" id="opt-age" name="age" checked>
+            <span class="label-text">
+              <strong>Distribution par Âge</strong>
+              <small>Répartition des participants par tranches d'âge</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-gender" name="gender" checked>
+            <span class="label-text">
+              <strong>Distribution par Genre</strong>
+              <small>Répartition Féminin / Masculin / Non-genré / Autre</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-origin" name="origin" checked>
+            <span class="label-text">
+              <strong>Distribution par Origine</strong>
+              <small>Répartition UE / Hors UE / Préfère ne pas répondre</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-professional-status" name="professional-status" checked>
+            <span class="label-text">
+              <strong>Distribution par Statut Professionnel</strong>
+              <small>Employé, Indépendant, Étudiant, Retraité, Sans emploi</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-education-level" name="education-level" checked>
+            <span class="label-text">
+              <strong>Distribution par Niveau d'Études</strong>
+              <small>Primaire, Secondaire, Universitaire (Licence/Master)</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- === SECTION ANALYSE === -->
+      <div class="preference-section">
+        <h3>📈 Graphiques d'Analyse</h3>
+        <div class="display-option-group">
+          <label>
+            <input type="checkbox" id="opt-comparison" name="comparison" checked>
+            <span class="label-text">
+              <strong>Comparaison des Activités (Avant/Après)</strong>
+              <small>Graphique comparatif de l'évolution des compétences (Vue Globale uniquement)</small>
+            </span>
+          </label>
+          
+          <label>
+            <input type="checkbox" id="opt-evolution" name="evolution" checked>
+            <span class="label-text">
+              <strong>Évolution Détaillée des Compétences</strong>
+              <small>Graphiques individuels par indicateur (Vue Activité uniquement)</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- === SECTION REMARQUES === -->
+      <div class="preference-section">
+        <h3>💬 Données Qualitatives</h3>
+        <div class="display-option-group">
+          <label>
+            <input type="checkbox" id="opt-remarks" name="remarks" checked>
+            <span class="label-text">
+              <strong>Afficher la Section Remarques et Commentaires</strong>
+              <small>Tous les commentaires ouverts des participants</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-actions">
+      <button type="button" class="btn secondary" id="cancel-display-options">Annuler</button>
+      <button type="button" class="btn primary" id="save-display-options">✓ Appliquer et Sauvegarder</button>
+    </div>
+  </div>
+</div>
+
+  <script src="config.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
