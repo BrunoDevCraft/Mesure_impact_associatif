@@ -1,0 +1,16 @@
+timestamp,participant_id,session_id,age,genre,origine,statut_professionnel,niveau_etudes,code_postal,autonomie_percue,confiance_en_soi,satisfaction_globale,recommandation_nps,remarques_ouvertes,in_q1,in_q2,in_q3,in_q4,in_q5
+2024-11-15T10:30:00Z,P-IN-001,S-Hiver-2025,45,Feminin,Française (ou Union Européenne),Sans_emploi,Primaire / Secondaire,76600,2,2,3,6,J'espère vraiment apprendre à utiliser Internet pour mes démarches,Rarement (1x/mois),2,1,1,2
+2024-11-15T11:00:00Z,P-IN-002,S-Hiver-2025,52,Masculin,Française (ou Union Européenne),Retraite,Post-secondaire / Technique,76600,3,3,4,7,Je veux être autonome avec l'ordinateur,Hebdomadaire,3,2,2,3
+2024-11-16T09:15:00Z,P-IN-003,S-Hiver-2025,38,Feminin,Étrangère (hors Union Européenne),Sans_emploi,Universitaire (Bac / Licence),76610,2,2,3,5,Difficile de comprendre les sites administratifs,Rarement (1x/mois),2,2,1,2
+2024-11-16T10:45:00Z,P-IN-004,S-Hiver-2025,67,Masculin,Française (ou Union Européenne),Retraite,Primaire / Secondaire,76600,1,1,3,4,Je n'ai jamais utilisé Internet de ma vie,Jamais,1,1,1,1
+2024-11-17T14:00:00Z,P-IN-005,S-Hiver-2025,29,Non_genré,Française (ou Union Européenne),Etudiant,Universitaire (Master / Doctorat),76000,4,4,4,8,Je veux améliorer mes compétences numériques,Quotidiennement,4,4,3,4
+2024-11-18T09:30:00Z,P-IN-006,S-Hiver-2025,41,Feminin,Étrangère (hors Union Européenne),Sans_emploi,Post-secondaire / Technique,76100,2,2,3,6,Besoin d'aide pour les emails et les formulaires,Rarement (1x/mois),2,1,1,2
+2024-11-18T11:00:00Z,P-IN-007,S-Hiver-2025,55,Masculin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76600,3,3,4,7,Mon entreprise demande plus de compétences numériques,Hebdomadaire,3,3,2,3
+2024-11-19T10:00:00Z,P-IN-008,S-Hiver-2025,48,Feminin,Française (ou Union Européenne),Sans_emploi,Primaire / Secondaire,76610,2,2,3,5,J'ai peur de faire des erreurs sur Internet,Rarement (1x/mois),2,2,1,2
+2024-11-20T13:30:00Z,P-IN-009,S-Hiver-2025,33,Masculin,Française (ou Union Européenne),Independant,Universitaire (Bac / Licence),76000,3,4,4,8,Utile pour mon activité professionnelle,Quotidiennement,4,3,3,4
+2024-11-20T15:00:00Z,P-IN-010,S-Hiver-2025,61,Feminin,Française (ou Union Européenne),Retraite,Primaire / Secondaire,76600,2,2,3,6,Mes petits-enfants veulent m'apprendre mais c'est compliqué,Rarement (1x/mois),2,1,1,2
+2024-11-21T09:00:00Z,P-IN-011,S-Hiver-2025,44,Masculin,Étrangère (hors Union Européenne),Sans_emploi,Post-secondaire / Technique,76100,2,3,3,6,Important pour trouver un emploi,Hebdomadaire,3,2,2,3
+2024-11-21T10:30:00Z,P-IN-012,S-Hiver-2025,36,Feminin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76000,4,4,4,9,Formation très utile pour mon travail,Quotidiennement,4,4,4,4
+2024-11-22T14:00:00Z,P-IN-013,S-Hiver-2025,58,Masculin,Française (ou Union Européenne),Retraite,Primaire / Secondaire,76600,2,2,3,5,Aucune remarque,Rarement (1x/mois),2,2,1,2
+2024-11-23T10:00:00Z,P-IN-014,S-Hiver-2025,27,Feminin,Française (ou Union Européenne),Etudiant,Universitaire (Master / Doctorat),76000,4,4,5,9,Excellente initiative de formation,Quotidiennement,5,4,4,5
+2024-11-23T11:30:00Z,P-IN-015,S-Hiver-2025,49,Masculin,Française (ou Union Européenne),Sans_emploi,Post-secondaire / Technique,76610,2,2,3,6,Espère que ça m'aidera pour mon retour à l'emploi,Hebdomadaire,3,2,2,3

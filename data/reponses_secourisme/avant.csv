@@ -1,0 +1,19 @@
+timestamp,participant_id,session_id,age,genre,origine,statut_professionnel,niveau_etudes,code_postal,autonomie_percue,confiance_en_soi,satisfaction_globale,recommandation_nps,remarques_ouvertes,sec_q1,sec_q2,sec_q3,sec_q4
+2024-11-20T09:00:00Z,P-SEC-001,S-PSC1-Nov24,28,Masculin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76000,3,3,4,7,Important de savoir porter secours,false,2,3,2
+2024-11-20T09:15:00Z,P-SEC-002,S-PSC1-Nov24,35,Feminin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Master / Doctorat),76100,3,3,4,8,Formation obligatoire dans mon entreprise,false,2,3,3
+2024-11-20T09:30:00Z,P-SEC-003,S-PSC1-Nov24,42,Masculin,Française (ou Union Européenne),Independant,Post-secondaire / Technique,76600,2,2,3,6,J'ai peur de mal faire,false,1,2,2
+2024-11-20T09:45:00Z,P-SEC-004,S-PSC1-Nov24,31,Feminin,Étrangère (hors Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76000,3,3,4,7,Utile pour ma famille,false,2,3,3
+2024-11-20T10:00:00Z,P-SEC-005,S-PSC1-Nov24,46,Masculin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76610,4,3,4,8,J'ai déjà fait une formation il y a 15 ans,true,3,4,3
+2024-11-20T10:15:00Z,P-SEC-006,S-PSC1-Nov24,29,Feminin,Française (ou Union Européenne),Etudiant,Universitaire (Master / Doctorat),76000,3,3,5,9,Essentiel pour mon futur métier d'infirmière,false,2,3,3
+2024-11-20T10:30:00Z,P-SEC-007,S-PSC1-Nov24,38,Masculin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76100,3,3,4,7,Aucune remarque,false,2,3,2
+2024-11-20T10:45:00Z,P-SEC-008,S-PSC1-Nov24,52,Feminin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76600,2,2,3,6,J'espère ne jamais avoir à m'en servir,false,1,2,2
+2024-11-20T11:00:00Z,P-SEC-009,S-PSC1-Nov24,27,Non_genré,Française (ou Union Européenne),Etudiant,Universitaire (Bac / Licence),76000,3,4,4,8,Formation très importante,false,3,3,4
+2024-11-20T11:15:00Z,P-SEC-010,S-PSC1-Nov24,44,Masculin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Master / Doctorat),76000,3,3,4,7,Obligatoire pour mon poste de manager,false,2,3,3
+2024-11-20T11:30:00Z,P-SEC-011,S-PSC1-Nov24,33,Feminin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76100,3,3,4,8,J'ai des enfants donc c'est rassurant,false,2,3,3
+2024-11-20T11:45:00Z,P-SEC-012,S-PSC1-Nov24,49,Masculin,Française (ou Union Européenne),Independant,Universitaire (Bac / Licence),76600,3,3,4,7,Utile dans mon métier,false,2,3,3
+2024-11-20T14:00:00Z,P-SEC-013,S-PSC1-Nov24,36,Feminin,Étrangère (hors Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76000,3,3,4,8,Formation complète et rassurante,false,2,3,3
+2024-11-20T14:15:00Z,P-SEC-014,S-PSC1-Nov24,41,Masculin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76100,2,2,3,6,Aucune remarque,false,1,2,2
+2024-11-20T14:30:00Z,P-SEC-015,S-PSC1-Nov24,30,Feminin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Master / Doctorat),76000,4,4,5,9,Très motivée par cette formation,false,3,4,4
+2024-11-20T14:45:00Z,P-SEC-016,S-PSC1-Nov24,55,Masculin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76610,3,3,4,7,Formation utile à tout âge,false,2,3,3
+2024-11-20T15:00:00Z,P-SEC-017,S-PSC1-Nov24,26,Feminin,Française (ou Union Européenne),Etudiant,Universitaire (Bac / Licence),76000,3,4,4,8,Important de savoir réagir,false,3,3,4
+2024-11-20T15:15:00Z,P-SEC-018,S-PSC1-Nov24,48,Masculin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76100,3,3,4,7,Aucune remarque,false,2,3,3

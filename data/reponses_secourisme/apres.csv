@@ -1,0 +1,17 @@
+timestamp,participant_id,session_id,age,genre,origine,statut_professionnel,niveau_etudes,code_postal,autonomie_percue,confiance_en_soi,satisfaction_globale,recommandation_nps,remarques_ouvertes,sec_q5,sec_q6,sec_q7
+2024-11-21T16:00:00Z,P-SEC-001,S-PSC1-Nov24,28,Masculin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76000,5,5,5,10,Formation excellente ! Formateur très pédagogue,5,5,5
+2024-11-21T16:10:00Z,P-SEC-002,S-PSC1-Nov24,35,Feminin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Master / Doctorat),76100,5,5,5,10,Très bien organisé et pratique,5,5,5
+2024-11-21T16:20:00Z,P-SEC-003,S-PSC1-Nov24,42,Masculin,Française (ou Union Européenne),Independant,Post-secondaire / Technique,76600,4,4,4,8,Je me sens maintenant capable d'intervenir,4,4,4
+2024-11-21T16:30:00Z,P-SEC-004,S-PSC1-Nov24,31,Feminin,Étrangère (hors Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76000,4,4,5,9,Formation rassurante et complète,5,4,5
+2024-11-21T16:40:00Z,P-SEC-005,S-PSC1-Nov24,46,Masculin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76610,5,5,5,9,Bon rappel et mise à jour de mes connaissances,5,5,5
+2024-11-21T16:50:00Z,P-SEC-006,S-PSC1-Nov24,29,Feminin,Française (ou Union Européenne),Etudiant,Universitaire (Master / Doctorat),76000,5,5,5,10,Parfait pour ma future carrière,5,5,5
+2024-11-21T17:00:00Z,P-SEC-007,S-PSC1-Nov24,38,Masculin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76100,4,4,4,8,Formation complète,4,4,4
+2024-11-21T17:10:00Z,P-SEC-008,S-PSC1-Nov24,52,Feminin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76600,4,4,4,7,Moins stressée maintenant que je sais comment réagir,4,4,4
+2024-11-21T17:20:00Z,P-SEC-009,S-PSC1-Nov24,27,Non_genré,Française (ou Union Européenne),Etudiant,Universitaire (Bac / Licence),76000,5,5,5,10,Formateur excellent et exercices pratiques très utiles,5,5,5
+2024-11-21T17:30:00Z,P-SEC-010,S-PSC1-Nov24,44,Masculin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Master / Doctorat),76000,4,4,4,8,Formation claire et efficace,4,4,5
+2024-11-21T17:40:00Z,P-SEC-011,S-PSC1-Nov24,33,Feminin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76100,5,5,5,9,Très rassurante pour une maman,5,5,5
+2024-11-21T17:50:00Z,P-SEC-012,S-PSC1-Nov24,49,Masculin,Française (ou Union Européenne),Independant,Universitaire (Bac / Licence),76600,4,4,4,8,Utile professionnellement,4,4,4
+2024-11-21T18:00:00Z,P-SEC-013,S-PSC1-Nov24,36,Feminin,Étrangère (hors Union Européenne),Employe_Salarie,Universitaire (Bac / Licence),76000,5,5,5,9,Formation très professionnelle,5,5,5
+2024-11-21T18:10:00Z,P-SEC-014,S-PSC1-Nov24,41,Masculin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76100,4,4,4,7,Bien organisé,4,4,4
+2024-11-21T18:20:00Z,P-SEC-015,S-PSC1-Nov24,30,Feminin,Française (ou Union Européenne),Employe_Salarie,Universitaire (Master / Doctorat),76000,5,5,5,10,Excellente formation que je recommande,5,5,5
+2024-11-21T18:30:00Z,P-SEC-016,S-PSC1-Nov24,55,Masculin,Française (ou Union Européenne),Employe_Salarie,Post-secondaire / Technique,76610,4,4,4,8,Formation adaptée à tous les âges,4,4,4
